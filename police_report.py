@@ -22,5 +22,7 @@ print("\n")
 data["stop_duration"] = data["stop_duration"].map({"0-15 Min": 7.5, "16-30 Min": 24, "30+ Min": 45})
 print(data["stop_duration"].mean())
 
+print("\n")
+
 # 5. Compare the age distribution for each violation.
 print(data.groupby("violation").driver_age_raw.describe())

@@ -1,6 +1,4 @@
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 data = pd.read_csv("ldnhousing_dataframe.csv")
 
@@ -38,6 +36,8 @@ print("\n")
 data["year"] = data["date"].dt.year
 print(data.groupby("year")["average_price"].max())
 print(data.groupby("year")["average_price"].min())
+
+print("\n")
 
 # 7. Find the mean 'no_of_crimes' per area.
 print(data.groupby("area")["no_of_crimes"].mean().sort_values(ascending = True))
